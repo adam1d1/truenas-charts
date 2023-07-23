@@ -1,0 +1,11 @@
+{{- include "ix.v1.common.loader.init" . -}}
+
+{{/* Merge the templates with Values */}}
+{{- $_ := mustMergeOverwrite .Values (include "joomla.configuration" $ | fromYaml) -}}
+{{- $_ := mustMergeOverwrite .Values (include "joomla.workload" $ | fromYaml) -}}
+{{- $_ := mustMergeOverwrite .Values (include "joomla.mariadb.workload" $ | fromYaml) -}}
+
+{{/* Create the configmap for portal manually*/}}
+{{- include "joomla.portal" $ -}}
+
+{{- include "ix.v1.common.loader.apply" . -}}

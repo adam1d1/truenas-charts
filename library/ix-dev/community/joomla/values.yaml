@@ -1,0 +1,27 @@
+image:
+  repository: joomla
+  pullPolicy: IfNotPresent
+  tag: 6.2.2
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8Gi
+
+wpConfig:
+  additionalEnvs: []
+
+jmNetwork:
+  webPort: 30040
+
+jmStorage:
+  data:
+    type: ixVolume
+    datasetName: data
+  mariadbData:
+    type: ixVolume
+    datasetName: mariadbData
+  mariadbBackup:
+    type: ixVolume
+    datasetName: mariadbBackup
+  additionalStorages: []

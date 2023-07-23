@@ -1,0 +1,40 @@
+{
+    "test": {},
+    "community": {
+        "joomla": {
+            "app_readme": "<h1>Joomla</h1>\n<p><a href=\"https://joomla.org/\">Joomla</a> is a web content management system.</p>\n<blockquote>\n<p>When application is installed, a container will be launched with <strong>root</strong> privileges.\nThis is required in order to apply the correct permissions to the <code>joomla</code> directories.\nAfterward, the <code>joomla</code> container will run as a <strong>non</strong>-root user (<code>33</code>).\nSame applies to the <code>mariadb</code> container. This will run afterwards as a <strong>non</strong>-root user (<code>999</code>).\nOn each upgrade, a container will be launched with <strong>root</strong> privileges in order to apply the correct\npermissions to the <code>mariadb</code> <strong>backups</strong> directory. Container that performs the backup will run as a <strong>non</strong>-root user (<code>999</code>) afterwards.\nKeep in mind the permissions on the backup directory will be changed to <code>999:999</code> on <strong>every</strong> update.\nBut will only be changed once for the <code>joomla</code> and <code>mariadb</code> data directories.</p>\n</blockquote>",
+            "categories": [
+                "productivity"
+            ],
+            "description": "Joomla is a web content management system",
+            "healthy": true,
+            "healthy_error": null,
+            "home": "https://joomla.org",
+            "location": "/__w/charts/charts/community/joomla",
+            "latest_version": "1.0.4",
+            "latest_app_version": "1.19.0",
+            "latest_human_version": "1.19.0_1.0.4",
+            "last_update": "2023-07-17 13:07:01",
+            "name": "joomla",
+            "recommended": false,
+            "title": "Joomla",
+            "maintainers": [
+                {
+                    "name": "adam",
+                    "url": "",
+                    "email": ""
+                }
+            ],
+            "tags": [
+                "cms",
+                "blog"
+            ],
+            "sources": [
+                "https://hub.docker.com/_/joomla",
+                "https://github.com/truenas/charts/tree/master/community/joomla"
+            ],
+            "icon_url": "https://github.com/joomla/joomla-cms/blob/4.3-dev/images/joomla_black.png"
+        }
+
+    }
+}

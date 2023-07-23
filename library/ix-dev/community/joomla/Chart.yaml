@@ -1,0 +1,25 @@
+name: joomla
+description: Joomla is a web content management system
+annotations:
+  title: Joomla
+type: application
+version: 1.0.4
+apiVersion: v2
+appVersion: '1.19.0'
+kubeVersion: '>=1.16.0-0'
+maintainers:
+  - name: truenas
+    url: https://www.truenas.com/
+    email: dev@ixsystems.com
+dependencies:
+  - name: common
+    repository: file://../../../common
+    version: 1.0.12
+home: https://joomla.org
+icon: https://github.com/joomla/joomla-cms/blob/4.3-dev/images/joomla_black.png
+sources:
+  - https://hub.docker.com/_/joomla
+  - https://github.com/truenas/charts/tree/master/community/joomla
+keywords:
+  - cms
+  - blog
